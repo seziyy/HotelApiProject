@@ -1,0 +1,16 @@
+{
+  "client": "browser",
+  "servers": [
+    {
+      "type": "mcp",
+      "name": "local-aspnet-mcp",
+      "transport": {
+        "type": "http",
+        "url": "http://localhost:5208/mcp"
+      }
+    }
+  ]
+}
+
+
+

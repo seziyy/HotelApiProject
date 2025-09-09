@@ -1,0 +1,9 @@
+{
+     "servers": {
+
+        "HotelMcpServer": {
+            "url": "http://localhost:5208",
+            "type": "streamable-http"
+        }
+     }
+}

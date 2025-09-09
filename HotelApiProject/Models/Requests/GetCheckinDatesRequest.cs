@@ -1,4 +1,6 @@
-﻿namespace HotelApiProject.Models;
+﻿using HotelApiProject.Models.Requests;
+
+namespace HotelApiProject.Models;
 
 public class GetCheckinDatesRequest
 {

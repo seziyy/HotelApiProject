@@ -1,4 +1,6 @@
 ﻿using HotelApiProject.Models;
+using HotelApiProject.Models.Requests;
+using HotelApiProject.Models.Responses;
 using HotelApiProject.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,10 +12,10 @@ namespace HotelApiProject.Controllers
     [Route("api/[controller]")]
     public class SearchController : ControllerBase
     {
-        private readonly ISanTsqApi _santsgApiService;
+        private readonly ISantsgApiService _santsgApiService;
 
 
-        public SearchController(ISanTsqApi a)
+        public SearchController(ISantsgApiService a)
         {
             _santsgApiService = a;
         }
@@ -65,7 +67,7 @@ namespace HotelApiProject.Controllers
         {
             var result = await _santsgApiService.GetCheckinDatesAsync(request);
 
-            if (result == null || result.AvailableDates == null || !result.AvailableDates.Any())
+            if (result == null || result.Body?.Dates == null || !result.Body.Dates.Any())
             {
                 return NotFound("Müsait giriş tarihi bulunamadı.");
             }

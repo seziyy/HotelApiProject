@@ -7,9 +7,9 @@ using System.Net;
 [Route("api/[controller]")]
 public class LoginController : ControllerBase
 {
-    private readonly ISanTsqApi _santsgApiService;
+    private readonly ISantsgApiService _santsgApiService;
 
-    public LoginController(ISanTsqApi santsgApiService)
+    public LoginController(ISantsgApiService santsgApiService)
     {
         _santsgApiService = santsgApiService;
     }

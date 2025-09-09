@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddHttpClient<SantsgApiService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<ISanTsqApi,SantsgApiService>();
+builder.Services.AddScoped<ISantsgApiService,SantsgApiService>();
 
 
 
